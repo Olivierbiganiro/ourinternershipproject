@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<style></style>
+
+
+<head>
+  {% load static %}
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYAMAGABE YACU</title>
+    <!-- font aware -->
+    <link rel="icon" href="../static/images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/contact.css">
+
+    <style>
+      #Home{
+      width: 100%;
+      height: 100vh;
+      background-image: url("../static/images/bckg.jpg");
+      background-size: cover;
+      background-position: center;
+      }
+      #services{
+        margin-top: 30px;
+      }
+      .about-section{
+  background: url(../static/images/bckg.jpg) no-repeat left;
+  background-size: 50%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.inner-container{
+  width: 60%;
+  float: right;
+  background-color: #fdfdfd;
+  padding: 30px;
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+  margin-left: 30%;
+
+}
+
+.line{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 135px;
+        height: 4px;
+        left: 49.5%;
+        border: 4px solid transparent;
+        border-bottom: 0px;
+        margin-left: -21px;
+        border-top-color: #2d4a8a;
+        top: auto; 
+      }
+      .title-service{
+  position: absolute;
+  left: 45.5%;
+  font-size: 33px;
+  top: 173.5%;
+  font-weight: 600;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text{
+  font-size: 17px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify  ;
+  margin-bottom: 20px;
+}
+
+.titles{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 30px;
+  
+
+}
+.values{
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+
+  align-items: center;
+}
+@media screen and (max-width:1000px){
+  .inner-container{
+      padding: 10px;
+  }
+}
+@media screen and (max-width:800px){
+  .about-section{
+      background-size: 100%;
+      padding: 100px 40px;
+  }
+  .inner-container{
+      width: 100%;
+  }
+}
+@media screen and (max-width:600px){
+  .about-section{
+      padding: 0;
+  }
+  .inner-container{
+      padding: 20px;
+  }
+}
+    </style>
+</head>
+<body>
+   <!-- =========================Navbar===================  -->
+   <section id="Home">
+   <header>
+    <h class="logo">
+    <img src="../static/images/Untitled.png">
+    <span>Nyamagabe District</span> 
+    </h>
+    <nav>
+    <ul id="sidemenu">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a  href="#services">Services</a></li>
+        <li><a  href="#contact">Contact</a></li>
+     </ul>
+    </nav>
+   </header>
+  <!-- =========================End of navbar===================  -->
+
+        <!-- =========================Home page===================  -->
+        
+          <div class="content-data">
+            <div class="title">
+              Murakaza neza 
+              <div class="slider">
+               <div class="">mukarere ka Nyamagabe</div>
+               <div class=""> Iwacu murisanga</div>
+               <div class="">muri Nyamagabe Yacu</div>
+              </div>
+            </div>
+          </div>
+          </section>
+        <!-- ========================= End of Home page===================  -->
+         
+<section class="about-section" id="about">
+  <div class="inner-container">
+      <h1>Nyamagabe Yacu</h1>
+      <p class="text">
+          Nyamagabe ni Akarere gaherereye mu Ntara y'Amajyepfo y'u Rwanda. Nyamagabe iri hagati y'Uturere twa Huye na Nyamasheke mu Majyepfo y'Uburengerazuba bw'u Rwanda. Aka Karere kagizwe n'ibice by'icyahoze ari Intara ya Gikongoro yakuweho mu 2006. Akarere ka Nyamagabe kagizwe n'imirenge 17 ariyo: Buruhukiro, Cyanika, Gatare, Kaduha, Kamegeri, Kibirizi, Kibumbwe, Kitabi, Mbazi, Mugano, Musange, Musebeya, Mushubi, Nkomane, Gasaka, Tare na Uwinkingi.
+      </p>
+<div class="titles">
+  <span>Imirenge</span>
+  <span>Utugari</span>
+  <span>Imidugudu</span>
+</div>
+<div class="values">
+  <span>17</span>
+  <span>92</span>
+  <span>536</span>
+</div>
+  </div>
+
+</section>
+
+        <!-- ========================= services ===================  -->
+
+        <section id="services">
+          <div class="title-service">Our services</div>
+          <br>
+          <div class="line"></div>
+          <br>
+            <div class="slide-container swiper">
+              <div class="slide-content">
+                
+              <div class="overlay"></div>
+                <div class="card-wrapper swiper-wrapper">
+                  {% for x in service %}
+                  
+                  <div class="card swiper-slide">
+                    <div class="card-content">
+                      <!-- <span class="overlay"></span> -->
+                      <div class="image">
+                        <img src="{{x.picture.url }}" alt="">
+                      </div>
+                      
+                      <div class="Title-description">
+                        <div class="Title">{{x.title}}</div>
+                        <div class="description">
+                          {{x.description}}
+                        </div>
+                        
+                      </div>
+
+                      <div class="btn_grp">
+                        <a href="{% url 'detail' x.id %}"> View more</a>
+                      </div>
+                     
+                      
+                    </div>
+                    
+                  </div>
+                  {%endfor%}
+                </div>
+                </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          </div>
+        </section>
+         <!-- =========================end of services ===================  -->
+<!--=====================================contact us ===============================-->
+
+<section class="contact" id="contact">
+  <div class="content-contact">
+      <h2>Twandikire</h2>
+  </div>
+  <div class="container-contact">
+      <div class="contactInfo">  
+          <div class="box">
+              <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+              <div class="text-contact">
+                  <h3>Aho tubarizwa</h3>
+                  <p>Southern Province, <br> Nyamagabe District</p>
+              </div>
+          </div>
+          <div class="box">
+              <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+              <div class="text-contact">
+                  <h3>Imeyili</h3>
+                  <p>info@nyamagabe.gov.rw</p>
+              </div>
+          </div>
+          <div class="box">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="text-contact">
+                  <h3>Telefoni</h3>
+                  <p>+25 078 XXX XXXX</p>
+              </div>
+          </div>
+      </div>
+      <div class="contactForm">
+          <form action="" name="CONTACT-US">
+              <h2>Ohereza ubutumwa</h2>
+              <div class="inputBox">
+                  <input type="text" name="Amazina" required="required">
+                  <span>Amazina Yombi</span>
+              </div>
+              <div class="inputBox">
+                  <input type="email" name="Imeyili" required="required">
+                  <span>Imeyili</span>
+              </div>
+              <div class="inputBox">
+                  <input type="number" name="Telefoni" required="required">
+                  <span>Telefoni ex: 07</span>
+              </div>
+              <div class="inputBox">
+                  <textarea name="Ubutumwa" required="required"></textarea>
+                  <span>Andika ubutumwa bwawe...</span>
+              </div>
+              <div class="inputBox">
+                  <input type="submit" name="" value="Ohereza">
+              </div>
+          </form>
+      </div>
+  </div>
+      </section>
+<!--==============================end of contact us =================================-->
+ 
+<footer class="bg-dark" id="tempaltemo_footer">
+    <div class="container">
+        <div class="row">
+    
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light"> Social Platforms</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <a class="text-decoration-none" href="">@nyamagabedistrict</a>
+                       
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-envelope"></i>
+                        <a class="text-decoration-none" href="">Nyamagabe District</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-brands fa-twitter"></i>
+                        <a class="text-decoration-none" href="">Nyamagabe District</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <a class="text-decoration-none" href="">Nyamagabe District</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Pillars</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>Gukunda Igihugu</li>
+                    <li>Ubunyangamugayo</li>
+                    <li>Kwihesha Agaciro</li>
+                    <li>Gukunda Umurimo</li>
+                </ul>
+            </div>
+    
+               <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Map</h2>
+                <ul class="list-unstyled text-light footer-link-list">  
+                    <li><i class="fas fa-map-marker-alt fa-fw"></i>
+                        <a class="text-decoration-none" href="">Kigali, Rwanda </a></li>
+                        <li><i class="fas fa-map-marker-alt fa-fw"></i>
+                            <a class="text-decoration-none" href="">Southern, Province</a></li>
+                            <li><i class="fas fa-map-marker-alt fa-fw"></i>
+                                <a class="text-decoration-none" href="">Nyamagabe, District</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </div>
+    
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <p class="text-center text-light">
+                    &copy; 2023 Republic of Rwanda Alright reserved by Nyamagabe District
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </footer>  
+
+</body>
+   <!-- Swiper JS -->
+   <script src="../static/js/swiper-bundle.min.js"></script>
+
+   <!-- JavaScript -->
+   <script src="../static/js/script.js"></script>
+</html>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxIjn8iklnerqXJky57AC6E2HbWnkJ3eLAxJpwwZ9U18HNhQthQ6WUJ1AzeqX6mMsbt/exec'
+  const form = document.forms['CONTACT-US']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        form.reset()
+        alert('Success!')
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>

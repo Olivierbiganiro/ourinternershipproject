@@ -1,2 +1,0 @@
-# ourinternershipproject
-Nyamagabe services
